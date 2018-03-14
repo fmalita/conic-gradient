@@ -295,8 +295,8 @@ if (self.StyleFix) {
 	// Test if conic gradients are supported first:
 	(function(){
 		var dummy = document.createElement("p");
-		dummy.style.backgroundImage = "conic-gradient(white, black)";
-		dummy.style.backgroundImage = PrefixFree.prefix + "conic-gradient(white, black)";
+		dummy.style.backgroundImage = "conic-gradient(white 0% 50%, black 0% 50%)";
+		dummy.style.backgroundImage = PrefixFree.prefix + "conic-gradient(white 0% 50%, black 50% 100%)";
 
 		if (!dummy.style.backgroundImage) {
 			// Not supported, use polyfill
